@@ -7,19 +7,6 @@
         <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/1to50d1" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/edumng" />
-            <option value="$PROJECT_DIR$/eventtest" />
-            <option value="$PROJECT_DIR$/mycalc" />
-            <option value="$PROJECT_DIR$/mymemo" />
-            <option value="$PROJECT_DIR$/sqlitetest" />
-            <option value="$PROJECT_DIR$/tway" />
-          </set>
-        </option>
         <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>

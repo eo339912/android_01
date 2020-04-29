@@ -6,22 +6,23 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
     public static String NAME = "tway.db";
-    public static int VERSION = 2;
+    public static int VERSION = 1;
 
     public DBHelper(Context context) {
         super(context, NAME, null, VERSION);
     }
 
     public void onCreate(SQLiteDatabase db) {
+
+
         String sql = "create table if not exists info("
                 + " baby_num integer PRIMARY KEY autoincrement, "
                 + " baby_name text, "
-                + " birthday text, "
                 + " gender text, "
+                + " birthday text, "
                 + " abo text)";
         db.execSQL(sql);
     }
-
 
     public void onOpen(SQLiteDatabase db) {
     }
@@ -33,3 +34,4 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 }
+
