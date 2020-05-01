@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
     public static String NAME = "tway.db";
-    public static int VERSION = 1;
+    public static int VERSION = 2;
 
     public DBHelper(Context context) {
         super(context, NAME, null, VERSION);
@@ -20,6 +20,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 + " baby_name text, "
                 + " gender text, "
                 + " birthday text, "
+                + " baby_face text, "
                 + " abo text)";
         db.execSQL(sql);
     }

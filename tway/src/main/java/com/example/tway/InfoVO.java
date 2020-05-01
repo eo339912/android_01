@@ -1,5 +1,7 @@
 package com.example.tway;
 
+import java.util.ArrayList;
+
 public class InfoVO {
 
     private Integer baby_num;
@@ -7,6 +9,7 @@ public class InfoVO {
     private String birthday;
     private String gender;
     private String abo;
+    private String baby_face;
 
     public Integer getBaby_num() {
         return baby_num;
@@ -46,5 +49,13 @@ public class InfoVO {
 
     public void setAbo(String abo) {
         this.abo = abo;
+    }
+
+    public String getBaby_face() {
+        return baby_face;
+    }
+
+    public void setBaby_face(String baby_face) {
+        this.baby_face = baby_face;
     }
 }
