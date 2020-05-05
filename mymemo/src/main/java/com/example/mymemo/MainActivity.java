@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<HashMap<String, String>> list =  new MemoDAO().selectAll(getApplicationContext());
 
 
-//        //2. listview에 customAdapter 연결
+        //2. listview에 customAdapter 연결
         ListViewAdapter adapter = new ListViewAdapter();
         adapter.setList(list);
         ListView lvCustom = findViewById(R.id.lvMemo);

@@ -27,15 +27,16 @@ public class DBHelper extends SQLiteOpenHelper {
                 + " IDX INTEGER PRIMARY KEY autoincrement, "
                 + " M_DATE text, "
                 + " S_DATE text, "
+                + " M_TIME text, "
+                + " S_TIME text, "
                 + " M_MEMO text, "
                 + " S_MEMO text, "
-                + " M_SIZE text, "
-                + " S_SIZE text)";
+                + " M_SIZE integer, "
+                + " S_SIZE integer)";
 
         db.execSQL(sql);
         db.execSQL(sql2);
 
-        db.execSQL("insert into  BABYCARE values(100,'홍길동', '홍길동', '홍길동', '홍길동', '홍길동','홍길동')");
     }
 
     public void onOpen(SQLiteDatabase db) {

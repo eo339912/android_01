@@ -68,7 +68,10 @@ public class MainActivity extends AppCompatActivity implements AutoPermissionsLi
         monthText = findViewById(R.id.monthText);
         dayText = findViewById(R.id.dayText);
 
+
+
         Calendar cal = Calendar.getInstance();
+//        int a = cal.get(Calendar.MONTH) +1;
         yearText.setHint("예) " + cal.get(Calendar.YEAR));
         monthText.setHint("예) " + cal.get(Calendar.MONTH));
         dayText.setHint("예) " + cal.get(Calendar.DATE));

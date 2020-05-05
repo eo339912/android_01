@@ -18,11 +18,12 @@
         android:layout_width="match_parent">
 
         <ImageButton
-            android:layout_height="match_parent"
+            android:id="@+id/btnHome"
             android:layout_width="68dp"
-            app:srcCompat="@drawable/btn_left"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FAFAFA"
             android:scaleType="centerCrop"
-            android:id="@+id/btnHome" />
+            app:srcCompat="@drawable/btn_left" />
 
         <TextView
             android:layout_height="match_parent"
@@ -36,12 +37,13 @@
             android:layout_weight="1" />
 
         <ImageButton
-            android:layout_height="match_parent"
-            android:layout_width="68dp"
-            app:srcCompat="@drawable/img_save2"
-            android:scaleType="centerCrop"
             android:id="@+id/btnSave"
-            android:layout_weight="1" />
+            android:layout_width="68dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FAFAFA"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/img_save2" />
 
     </LinearLayout>
 
@@ -54,7 +56,7 @@
         <EditText
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:id="@+id/MilkMemo"
+            android:id="@+id/SleepMemo"
             android:textSize="18sp"
             tools:gravity="center"
             android:inputType="textPersonName"
@@ -68,25 +70,45 @@
     <FrameLayout
         android:id="@+id/FrameLayout"
         android:layout_width="match_parent"
-        android:layout_height="445dp">
+        android:layout_height="436dp">
 
 
-        <com.example.tway.CustomView
-            android:id="@+id/customView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="139dp"
+            android:layout_height="242dp"
+            android:layout_alignTop="@+id/btn3"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="0dp"
+            android:gravity="bottom">
+
+            <RelativeLayout
+                android:id="@+id/abcde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+
+                <Button
+                    android:id="@+id/milksizebox"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:srcCompat="@drawable/img_milk" />
+
     </FrameLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
@@ -95,7 +117,6 @@
             android:layout_width="68dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
             android:text="-"
             android:textSize="24sp" />
 
@@ -103,15 +124,16 @@
             android:id="@+id/txtMilkSize"
             android:layout_width="213dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnMilkUp"
             android:layout_width="68dp"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
             android:layout_weight="1"
-            android:gravity="center"
             android:text="+"
             android:textSize="24sp" />
 

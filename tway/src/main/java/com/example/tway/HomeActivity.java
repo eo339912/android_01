@@ -8,6 +8,8 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.SimpleAdapter;
@@ -31,6 +33,10 @@ public class HomeActivity extends AppCompatActivity {
     TextView genderblood;
     ImageView babyFace;
 
+    Button btnMilk;
+    Button btnList;
+    Button btnSleep;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +47,9 @@ public class HomeActivity extends AppCompatActivity {
         ddayText = findViewById(R.id.ddayText);
         genderblood = findViewById(R.id.genderblood);
         babyFace = findViewById(R.id.babyFace);
+        btnMilk = findViewById(R.id.btnMilk);
+        btnList = findViewById(R.id.btnList);
+        btnSleep = findViewById(R.id.btnSleep);
 
         //한건조회 -> 마지막으로 추가된 행을 조회한다.
         try {
@@ -48,6 +57,36 @@ public class HomeActivity extends AppCompatActivity {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+
+        btnMilk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Milk
+                Intent intent = new Intent(getApplicationContext(), MilkActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        btnList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Milk
+                Intent intent = new Intent(getApplicationContext(), PrintActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        btnSleep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Milk
+                Intent intent = new Intent(getApplicationContext(), SleepActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
 
     }
