@@ -99,24 +99,23 @@ public class PrintActivity extends AppCompatActivity {
 
                 if(day>1 && day <= totaldate){
                     day--;
-                    cal.set(year,month, day);
                 }else if(day == 1){ //1일
                     if(month > 1){ // a월 1일
                         month--;
                         day = totaldate;
-                        cal.set(year,month, day);
-                    }else if(month == 1 && day ==1){ //1월 1일
+                    }else if(month == 1){ //1월 1일
                         month = 12;
                         day = totaldate;
                         year--;
-                        cal.set(year,month, day);
                     }
                 }
 
+                cal.set(year,month, day);
                 txtDate.setText(year + "-" + month + "-" + day);
 
                 listMilk();
                 setMilkSum();
+                setSleepSum();
             }
         });
 
@@ -144,6 +143,7 @@ public class PrintActivity extends AppCompatActivity {
 
                 listMilk();
                 setMilkSum();
+                setSleepSum();
             }
         });
     }

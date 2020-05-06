@@ -71,7 +71,7 @@ public class HomeActivity extends AppCompatActivity {
         btnList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Milk
+                //print
                 Intent intent = new Intent(getApplicationContext(), PrintActivity.class);
                 startActivity(intent);
 
@@ -81,7 +81,7 @@ public class HomeActivity extends AppCompatActivity {
         btnSleep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Milk
+                //sleep
                 Intent intent = new Intent(getApplicationContext(), SleepActivity.class);
                 startActivity(intent);
 
@@ -125,7 +125,7 @@ public class HomeActivity extends AppCompatActivity {
         //월
         SimpleDateFormat transMonth = new SimpleDateFormat("M");
         String sMonth = transMonth.format(dBirth);
-        int aMonth = Integer.parseInt(sMonth);
+        int aMonth = Integer.parseInt(sMonth)-1;
         //일
         SimpleDateFormat transDate = new SimpleDateFormat("dd");
         String sDate = transDate.format(dBirth);
